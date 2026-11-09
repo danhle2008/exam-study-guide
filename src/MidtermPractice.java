@@ -168,7 +168,18 @@ public class MidtermPractice {
      * Explanation: 5 * 3 * 4 = 60
      */
     public static int product(ListNode head) {
-        return 1;
+        if (head == null) {
+            return 1;
+        }
+
+        ListNode current = head;
+        int product = 1;
+        while (current != null) { 
+            product = product * current.data;
+            current = current.next;
+        }
+
+        return product;
     }
 
     /**
