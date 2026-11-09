@@ -80,7 +80,18 @@ public class MidtermPractice {
      * Example: input: {"a"=7, "x"=4, "z"=5} -> output: 2
      */
     public static int countOddNumbers(Map<String, Integer> map) {
-        return -1;
+
+        if (map == null || map.isEmpty()) {
+            return 0;
+        }
+
+        int oddCount = 0;
+        for (int val : map.values()) {
+            if (map != null && val%2 != 0) {
+                oddCount++;
+            }
+        }
+        return oddCount;
     }
 
     /**
