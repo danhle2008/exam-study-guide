@@ -10,7 +10,21 @@ public class MidtermPractice {
      * Example: input: ["apple", "banana", "kiwi"] -> output: "banana"
      */
     public static String findLongestWord(List<String> list) {
-        return "";
+
+        if (list.isEmpty() || list == null) {
+            return "";
+        } 
+
+        String longest = "";
+
+        for (int i = 0; i < list.size(); i++) {
+            String current = list.get(i);
+            if (current != null && current.length() > longest.length()) {
+                longest = current;
+            }
+        }
+
+        return longest;
     }
 
     /**
@@ -20,7 +34,19 @@ public class MidtermPractice {
      * Example: input: ["why"=7, "hello"=8, "brilliant"=99, "world"=15, "amazing"=17] -> output: 2
      */
     public static int countLongWords(Map<String, Integer> map) {
-        return -1;
+
+        if (map == null || map.isEmpty()) {
+            return 0;
+        }
+        int count = 0; 
+
+        for (String key : map.keySet()) {
+            if (key != null && key.length() > 5 ) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     /**
